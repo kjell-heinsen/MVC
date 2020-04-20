@@ -1,5 +1,7 @@
 <?php
 
+namespace lib;
+
 class Database extends mysqli{
  
     private $link = null;
