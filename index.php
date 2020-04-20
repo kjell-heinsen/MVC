@@ -19,13 +19,14 @@ function autoloadsystem($class)
     $filename = str_replace('\\', '/', $class . '.php');
     $filename = DOCROOT . strtolower($filename);
     if (file_exists($filename)) {
-        require_once $filename;
+        echo $filename;
     }
 
 }
+spl_autoload_register("autoloadsystem");
 use  core\main;
 
-$app = new Main\App;
+$app = new main\App();
 $myurl = $app->_url;
 if (file_exists(CONFIGFILE)) {
     require_once CONFIGFILE;

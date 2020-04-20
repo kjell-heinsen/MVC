@@ -12,7 +12,7 @@ class App
 
     public function __construct()
     {
-        Main\Session::init(); //Die spätere Session-Klasse
+        Session::init(); //Die spätere Session-Klasse
         $this->_getUrl();
     }
 
@@ -60,7 +60,7 @@ class App
 
     public function GetInstaller()
     {
-
+    echo shell_exec("git log -1 ");
     }
 
 
