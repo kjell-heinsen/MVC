@@ -58,6 +58,10 @@ class App
 
     }
 
+    public function GetInstaller()
+    {
+
+    }
 
 
 

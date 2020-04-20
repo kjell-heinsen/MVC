@@ -1,5 +1,6 @@
 <?php
-
+$HasConfig = 0;
+$myurl = '';
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 ini_set('log_errors', 'On');
@@ -10,6 +11,7 @@ ob_start();
 $root = dirname(__FILE__);
 $root = $root . '/';
 DEFINE('DOCROOT', $root);
+DEFINE('CONFIGFILE', 'config.php');
 
 function autoloadsystem($class)
 {
@@ -21,6 +23,22 @@ function autoloadsystem($class)
     }
 
 }
+use  core\main;
+
+$app = new Main\App;
+$myurl = $app->_url;
+if (file_exists(CONFIGFILE)) {
+    require_once CONFIGFILE;
+    $HasConfig = 1;
+} else {
+   $app->GetInstaller();
+}
+
+if($HasConfig === 1)
+{
+$app->init();
+}
+
 
 spl_autoload_register("autoloadsystem");
 
