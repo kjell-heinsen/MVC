@@ -24,7 +24,7 @@ class Database extends mysqli{
             $this->disconnect();
         }
     }
- 
+
     
 
     public function disconnect()
