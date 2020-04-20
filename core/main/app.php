@@ -12,7 +12,7 @@ class App
 
     public function __construct()
     {
-        Session::init(); //Die spätere Session-Klasse
+        Main\Session::init(); //Die spätere Session-Klasse
         $this->_getUrl();
     }
 
