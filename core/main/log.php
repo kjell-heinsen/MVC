@@ -1,13 +1,16 @@
 <?php
 namespace core\main;
+use lib\Database;
 
 class Log {
-    
+
+    private $_db;
     
     
    public function __construct()
     {
-          parent::__construct();  
+          parent::__construct();
+          $this->_db = new Database();
     }  
     
 
@@ -15,6 +18,7 @@ class Log {
 
  public function write($message,$status,$ip='',$user='')
  {
+
      
  }
  
