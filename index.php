@@ -19,7 +19,7 @@ function autoloadsystem($class)
     $filename = str_replace('\\', '/', $class . '.php');
     $filename = DOCROOT . strtolower($filename);
     if (file_exists($filename)) {
-        echo $filename;
+        require_once $filename;
     }
 
 }

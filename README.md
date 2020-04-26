@@ -1,5 +1,5 @@
-[![Generic badge](https://img.shields.io/badge/Projekt-Aktiv-xx.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Release-Keins-red.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Projekt-Aktiv-xx.svg)](#)
+[![Generic badge](https://img.shields.io/badge/Release-Keins-red.svg)](#)
 
 
 
@@ -11,7 +11,10 @@ Sowohl einfache Webseiten, als auch andere Webtools.
 In Bearbeitung
 
 ## Achtung
-Dieses Projekt ist noch in der frühen Entwicklung und noch nicht Funktionsfähig !
+Dieses Projekt ist noch in der frühen Entwicklung und noch nicht funktionsfähig !
 
 ## Updates ab v0.0.1.0
 Dieses Projekt erhält jeden Samstag ein Update bis die Version v1.0.0.0 erreicht ist.  
+
+## Updates ab v1.0.0.0
+Jeden zweiten und letzten Samstag kommt ein Update.

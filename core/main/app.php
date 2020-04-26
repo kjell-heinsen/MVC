@@ -37,7 +37,9 @@ class App
         $this->InsertFile('header.php');
         $this->InsertFile('popup.php');
         $this->InsertFile('navigation.php');
-        $this->GetContent();
+       if(file_exists('install') AND is_dir('install')) {
+           $this->GetInstaller();
+       } else  $this->GetContent();
         $this->InsertFile('footer.php');
 
 
@@ -45,9 +47,9 @@ class App
 
     }
 
-    private function InsertFile($filename)
+    private function InsertFile($filename,$path='modul/')
     {
-        $filename = DOCROOT.'modul/'.strtolower($filename);
+        $filename = DOCROOT.$path.strtolower($filename);
         if (file_exists($filename)) {
             require_once $filename;
         }
@@ -60,7 +62,7 @@ class App
 
     public function GetInstaller()
     {
-    echo shell_exec("git log -1 ");
+    $this->InsertFile('installer.php','install/');
     }
 
 
