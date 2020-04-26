@@ -41,6 +41,6 @@ $app->init();
 }
 
 
-spl_autoload_register("autoloadsystem");
+
 
 ?>
